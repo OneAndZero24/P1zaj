@@ -3,6 +3,8 @@ jobs:
   maanan:
     steps:
       - uses: actions/checkout@v2
+      - run: g++ -Wall -o kostka kostka.cpp
+      - run: ./kostka 
     runs-on: ${{matrix.platform}}
     strategy:
       matrix: 
