@@ -2,7 +2,7 @@ on: [push,pull_request]
 jobs:
   maanan:
     steps:
-      - run: echo 'Hello World!'
+      - uses: actions/checkout@v2
     runs-on: ${{matrix.platform}}
     strategy:
       matrix: 
