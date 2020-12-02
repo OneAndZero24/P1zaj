@@ -3,4 +3,7 @@ jobs:
   maanan:
     steps:
       - run: echo 'Hello World!'
-    runs-on: ubuntu-latest
+    runs-on: ${{matrix.platform}}
+    strategy:
+      matrix: 
+        platform: [ubuntu-latest, macos-latest, windows-latest]
